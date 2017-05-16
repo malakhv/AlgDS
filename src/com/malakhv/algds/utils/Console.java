@@ -57,12 +57,12 @@ public class Console {
     /**
      * Prints an object.
      * */
-    private static void print(Object o) { System.out.print(o); }
+    public static void print(Object o) { System.out.print(o); }
 
     /**
      * Prints an Object and then terminate the line.
      * */
-    private static void println(Object o) { System.out.println(o); }
+    public static void println(Object o) { System.out.println(o); }
 
     /** This class has only static data, not need to create instance. */
     private Console() { /* Empty */ }
