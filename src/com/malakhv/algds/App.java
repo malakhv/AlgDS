@@ -17,6 +17,7 @@
 package com.malakhv.algds;
 
 import com.malakhv.algds.list.SinglyLinkedList;
+import com.malakhv.algds.number.Fibonacci;
 import com.malakhv.algds.utils.Console;
 
 /**
@@ -71,5 +72,24 @@ public final class App {
         Console.println("Revert:"); Console.println(list);
         list.invert(); Console.println(list);
         SinglyLinkedList.invert(list); Console.println(list);
+        Console.line();
+
+        /*
+         * Fibonacci
+         * */
+        Console.head("Fibonacci");
+        int fib = 0;
+        for (int i = 0; i < 20; i++) {
+            fib = Fibonacci.getRecursion(i);
+            Console.print(fib); Console.print(" ");
+        }
+        Console.line();
+        for (int i = 0; i < 20; i++) {
+            fib = Fibonacci.getLoop(i);
+            Console.print(fib); Console.print(" ");
+        }
+        Console.line();
+
+
     }
 }
