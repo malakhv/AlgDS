@@ -28,17 +28,17 @@ public class Node<E> {
     /**
      * @return The data element of this node.
      * */
-    E get() { return element; }
+    public E get() { return element; }
 
     /**
      * Set a new data element for this node.
      * */
-    void set(E value) { element = value; }
+    public void set(E value) { element = value; }
 
     /**
      * @return True, if this node has data, false otherwise.
      * */
-    boolean has() { return element != null; }
+    public boolean has() { return element != null; }
 
     /**
      * Returns a string representation of the data element in this node.
