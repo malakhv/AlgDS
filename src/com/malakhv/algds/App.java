@@ -16,17 +16,73 @@
 
 package com.malakhv.algds;
 
+import com.malakhv.algds.list.SinglyLinkedList;
+import com.malakhv.algds.utils.Console;
+
 /**
  * The main class of this application.
  * @author Mikhail.Malakhov [malakhv@live.ru|https://github.com/malakhv]
  * */
 public final class App {
 
+
+    /** The name of this app. */
+    private static final String APP_NAME = "AlgDS";
+
     /**
      * The main task block of this app.
      * */
     public static void main(String[] args) {
-    	System.out.println("Hello!");
-    	
+
+        /*
+         * Single Linked List
+         * */
+        Console.head("Singly Linked List");
+        SinglyLinkedList<Integer> list = new SinglyLinkedList<>();
+
+        /* Add several elements and print it */
+        for (int i = 0; i < 10; i++) {
+            list.add(i);
+        }
+        Console.println(list);
+
+        Console.print("{");
+        Integer element;
+        for (int i = 0; i < 10; i++) {
+            element = list.get(i);
+            Console.print(element);
+            if (i < 9) Console.print(",");
+        }
+        Console.println("}");
+
+        /* Remove element */
+        Console.println("Remove:");
+        list.remove(0);
+        Console.println(list);
+        list.remove(1);
+        Console.println(list);
+        list.remove(-5);
+        Console.println(list);
+        list.remove(15);
+        Console.println(list);
+
+        /* Insert element */
+        Console.println("Insert:");
+        list.add(0,0);
+        Console.println(list);
+        list.add(2,2);
+        Console.println(list);
+        list.add(2,-1);
+        Console.println(list);
+        list.add(2,12);
+        Console.println(list);
+
+        /* Revert list */
+        Console.println("Revert:");
+        list.invert();
+        Console.println(list);
+        SinglyLinkedList.invert(list);
+        Console.println(list);
+
     }
 }
