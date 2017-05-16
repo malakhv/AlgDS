@@ -41,9 +41,7 @@ public final class App {
         SinglyLinkedList<Integer> list = new SinglyLinkedList<>();
 
         /* Add several elements and print it */
-        for (int i = 0; i < 10; i++) {
-            list.add(i);
-        }
+        for (int i = 0; i < 10; i++) list.add(i);
         Console.println(list);
 
         Console.print("{");
@@ -56,33 +54,22 @@ public final class App {
         Console.println("}");
 
         /* Remove element */
-        Console.println("Remove:");
-        list.remove(0);
-        Console.println(list);
-        list.remove(1);
-        Console.println(list);
-        list.remove(-5);
-        Console.println(list);
-        list.remove(15);
-        Console.println(list);
+        Console.println("Remove:"); Console.println(list);
+        list.remove(0); Console.println(list);
+        list.remove(1); Console.println(list);
+        list.remove(-5); Console.println(list);
+        list.remove(15); Console.println(list);
 
         /* Insert element */
-        Console.println("Insert:");
-        list.add(0,0);
-        Console.println(list);
-        list.add(2,2);
-        Console.println(list);
-        list.add(2,-1);
-        Console.println(list);
-        list.add(2,12);
-        Console.println(list);
+        Console.println("Insert:"); Console.println(list);
+        list.add(0,0); Console.println(list);
+        list.add(2,2); Console.println(list);
+        list.add(2,-1); Console.println(list);
+        list.add(2,12); Console.println(list);
 
         /* Revert list */
-        Console.println("Revert:");
-        list.invert();
-        Console.println(list);
-        SinglyLinkedList.invert(list);
-        Console.println(list);
-
+        Console.println("Revert:"); Console.println(list);
+        list.invert(); Console.println(list);
+        SinglyLinkedList.invert(list); Console.println(list);
     }
 }
