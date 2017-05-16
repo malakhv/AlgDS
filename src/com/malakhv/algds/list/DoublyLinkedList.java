@@ -1,5 +1,7 @@
 package com.malakhv.algds.list;
 
+import com.malakhv.algds.data.Node;
+
 /**
  * Created by malakhv on 16.05.17.
  */

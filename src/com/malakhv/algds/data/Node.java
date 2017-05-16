@@ -14,10 +14,10 @@
  * limitations under the License.
  * */
 
-package com.malakhv.algds.list;
+package com.malakhv.algds.data;
 
 /**
- * Basic node class for linked list.
+ * Basic node class for linked list, tree or another data structures.
  * @author Mikhail.Malakhov [malakhv@live.ru|https://github.com/malakhv]
  * */
 public class Node<E> {

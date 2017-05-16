@@ -16,6 +16,8 @@
 
 package com.malakhv.algds.list;
 
+import com.malakhv.algds.data.Node;
+
 /**
  * The singly linked list.
  * @author Mikhail.Malakhov [malakhv@live.ru|https://github.com/malakhv]
