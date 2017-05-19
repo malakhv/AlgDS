@@ -22,13 +22,19 @@ package com.malakhv.algds.number;
  * */
 public class Fibonacci {
 
-    public static int getRecursion(int n) {
+    /**
+     * @return The n-member of a Fibonacci sequence.
+     * */
+    public static int getByRecursion(int n) {
         if (n <= 0) return 0;
         if (n <= 2) return 1;
-        return getRecursion(n - 2) + getRecursion(n - 1);
+        return getByRecursion(n - 2) + getByRecursion(n - 1);
     }
 
-    public static int getLoop(int n) {
+    /**
+     * @return The n-member of a Fibonacci sequence.
+     * */
+    public static int getByLoop(int n) {
         if (n <= 0) return 0;
         if (n <= 2) return 1;
         int n1 = 0, n2 = 1, fib = 1; // for n = 2

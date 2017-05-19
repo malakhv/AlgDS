@@ -80,12 +80,12 @@ public final class App {
         Console.head("Fibonacci");
         int fib = 0;
         for (int i = 0; i < 20; i++) {
-            fib = Fibonacci.getRecursion(i);
+            fib = Fibonacci.getByRecursion(i);
             Console.print(fib); Console.print(" ");
         }
         Console.line();
         for (int i = 0; i < 20; i++) {
-            fib = Fibonacci.getLoop(i);
+            fib = Fibonacci.getByLoop(i);
             Console.print(fib); Console.print(" ");
         }
         Console.line();
