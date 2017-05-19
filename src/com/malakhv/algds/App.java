@@ -18,7 +18,10 @@ package com.malakhv.algds;
 
 import com.malakhv.algds.list.SinglyLinkedList;
 import com.malakhv.algds.number.Fibonacci;
+import com.malakhv.algds.number.PrimeNumbers;
 import com.malakhv.algds.utils.Console;
+
+import java.util.List;
 
 /**
  * The main class of this application.
@@ -39,6 +42,9 @@ public final class App {
 
         // Fibonacci
         if (false) testFibonacci();
+
+        // Prime Numbers
+        if (true) testPrimeNumbers();
 
     }
 
@@ -93,6 +99,12 @@ public final class App {
             Console.print(fib); Console.print(" ");
         }
         Console.line();
+    }
+
+    private static void testPrimeNumbers() {
+        Console.head("Prime Numbers");
+        List list = PrimeNumbers.get(100);
+        Console.println(list);
     }
 
 }
