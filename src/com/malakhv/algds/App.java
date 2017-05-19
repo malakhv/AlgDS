@@ -34,10 +34,15 @@ public final class App {
      * The main task block of this app.
      * */
     public static void main(String[] args) {
+        // LinkedList
+        if (false) testList();
 
-        /*
-         * Single Linked List
-         * */
+        // Fibonacci
+        if (false) testFibonacci();
+
+    }
+
+    private static void testList() {
         Console.head("Singly Linked List");
         SinglyLinkedList<Integer> list = new SinglyLinkedList<>();
 
@@ -73,10 +78,9 @@ public final class App {
         list.invert(); Console.println(list);
         SinglyLinkedList.invert(list); Console.println(list);
         Console.line();
+    }
 
-        /*
-         * Fibonacci
-         * */
+    private static void testFibonacci() {
         Console.head("Fibonacci");
         int fib = 0;
         for (int i = 0; i < 20; i++) {
@@ -89,7 +93,6 @@ public final class App {
             Console.print(fib); Console.print(" ");
         }
         Console.line();
-
-
     }
+
 }
