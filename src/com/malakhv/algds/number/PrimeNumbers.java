@@ -38,12 +38,12 @@ public class PrimeNumbers {
         prime[0] = false;
         for (int i = 1; i < prime.length; i++) prime[i] = true;
 
-        // Main algorithm
+        // Main algorithm (Sieve of Eratosthenes)
         for (int i = 2; i < prime.length; i++) {
-            for (int j = i; j < prime.length; j = j + i) {
+            if (!prime[i]) continue;
+            for (int j = i+i; j < prime.length; j = j + i) {
                 prime[j] = false;
             }
-            if (!prime[i]) break;
         }
 
         // Fill list
