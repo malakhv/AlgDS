@@ -22,6 +22,7 @@ import me.mikhan.algds.data.Node;
 
 /**
  * The singly linked list.
+ *
  * @author Mikhail.Malakhov
  * */
 public class SinglyLinkedList<E> implements List<E> {
@@ -29,9 +30,7 @@ public class SinglyLinkedList<E> implements List<E> {
     /** The first node. */
     private SNode<E> first = null;
 
-    /**
-     * {@inheritDoc}
-     * */
+    /** {@inheritDoc} */
     @Override
     public boolean add(E element) {
         SNode<E> last = getLast();
@@ -42,9 +41,7 @@ public class SinglyLinkedList<E> implements List<E> {
         return true;
     }
 
-    /**
-     * {@inheritDoc}
-     * */
+    /** {@inheritDoc} */
     @Override
     public boolean add(E element, int index) {
         SNode<E> node = first;
@@ -66,9 +63,7 @@ public class SinglyLinkedList<E> implements List<E> {
         return false;
     }
 
-    /**
-     * {@inheritDoc}
-     * */
+    /** {@inheritDoc} */
     @Override
     public E get(int index) {
         SNode<E> node = node(index);
@@ -101,9 +96,7 @@ public class SinglyLinkedList<E> implements List<E> {
         return index <= 0 ? node : null;
     }
 
-    /**
-     * Remove element from this list by specified index.
-     * */
+    /** {@inheritDoc} */
     @Override
     public boolean remove(int index) {
 
@@ -130,11 +123,10 @@ public class SinglyLinkedList<E> implements List<E> {
         return false;
     }
 
-    /**
-     * Invert this list.
-     * */
-    public void invert() {
-        if(isEmpty()) return;
+    /** {@inheritDoc} */
+    @Override
+    public void reverse() {
+        if (isEmpty()) return;
         SNode<E> node = first.next;
         SNode<E> next;
         first.next = null;
@@ -147,30 +139,29 @@ public class SinglyLinkedList<E> implements List<E> {
     }
 
     /**
-     * Invert specified list.
+     * Reverses the order of the elements in the specified list.
      * */
-    @SuppressWarnings("rawtypes")
-	public static void invert(SinglyLinkedList list) {
+    @SuppressWarnings({ "rawtypes", "unchecked" })
+    public static void reverse(SinglyLinkedList<?> list) {
         if (list == null || list.isEmpty()) return;
-        SinglyNode node = list.first.next;
-        SinglyNode next;
+        SNode node = list.first.next;
+        SNode next;
         list.first.next = null;
         while (node != null) {
             next = node.getNext();
             node.setNext(list.first);
-            list.first = (SNode) node;
+            list.first = node;
             node = next;
         }
     }
 
+    /** {@inheritDoc} */
     @Override
     public boolean isEmpty() {
         return first == null;
     }
 
-    /**
-     * {@inheritDoc}
-     * */
+    /** {@inheritDoc} */
     @Override
     public int size() {
         SNode<E> node = first;
@@ -182,9 +173,7 @@ public class SinglyLinkedList<E> implements List<E> {
         return size;
     }
 
-    /**
-     * {@inheritDoc}
-     * */
+    /** {@inheritDoc} */
     @Override
     public String toString() {
         if (isEmpty()) return "{}";
@@ -205,7 +194,8 @@ public class SinglyLinkedList<E> implements List<E> {
     /**
      * The node of this list.
      * */
-    public static class SNode<E> extends Node<E> implements SinglyNode<SNode<E>>  {
+    public static class SNode<E> extends Node<E>
+        implements SinglyNode<SNode<E>> {
 
         /** The next node, maybe null. */
         private SNode<E> next = null;
@@ -216,6 +206,7 @@ public class SinglyLinkedList<E> implements List<E> {
             return next;
         }
 
+        /** {@inheritDoc} */
         @Override
         public void setNext(SNode<E> node) {
             next = node;

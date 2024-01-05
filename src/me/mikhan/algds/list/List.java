@@ -47,6 +47,11 @@ public interface List<E> {
     boolean remove(int index);
 
     /**
+     * Reverses the order of the elements in this list.
+     * */
+    void reverse();
+
+    /**
      * @return True, if this list is empty.
      * */
     boolean isEmpty();

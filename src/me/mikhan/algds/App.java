@@ -23,6 +23,8 @@ import me.mikhan.algds.number.Fibonacci;
 import me.mikhan.algds.number.PrimeNumbers;
 import me.mikhan.algds.utils.Console;
 
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -58,6 +60,7 @@ public final class App {
         // Fill list
         for (int i = 0; i < 17; i++) list.add(i);
         Console.println(list);
+        Console.line();
 
         // Remove element
         Console.println("Remove:");
@@ -65,6 +68,7 @@ public final class App {
         list.remove(1); Console.println(list);
         list.remove(-5); Console.println(list);
         list.remove(14); Console.println(list);
+        Console.line();
 
         // Insert element
         Console.println("Insert:");
@@ -72,13 +76,13 @@ public final class App {
         list.add(2,2); Console.println(list);
         list.add(2,-1); Console.println(list);
         list.add(16,16); Console.println(list);
+        Console.line();
 
         // Revert list
         Console.println("Revert:");
-        list.invert();
         Console.println(list);
-        SinglyLinkedList.invert(list);
-        Console.println(list);
+        list.reverse(); Console.println(list);
+        SinglyLinkedList.reverse(list); Console.println(list);
         Console.line();
     }
 

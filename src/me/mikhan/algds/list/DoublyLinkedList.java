@@ -45,6 +45,9 @@ public class DoublyLinkedList<E> implements List<E> {
     }
 
     @Override
+    public void reverse() { }
+
+    @Override
     public boolean isEmpty() {
         return false;
     }
@@ -83,4 +86,5 @@ public class DoublyLinkedList<E> implements List<E> {
         @Override
         public boolean hasPrev() { return prev != null; }
     }
+
 }
