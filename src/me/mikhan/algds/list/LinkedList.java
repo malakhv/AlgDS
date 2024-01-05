@@ -20,12 +20,13 @@ package me.mikhan.algds.list;
 
 /**
  * Basic interface for linked list (singly or doubly).
- * @author Mikhail.Malakhov [malakhv@live.ru|https://github.com/malakhv]
+ *
+ * @author Mikhail.Malakhov
  * */
 public interface LinkedList<E> {
 
     /**
-     * Add specified element to this list.
+     * Add an element to this list.
      * */
     boolean add(E element);
 
@@ -50,6 +51,9 @@ public interface LinkedList<E> {
      * */
     boolean isEmpty();
 
-    /** @return The number of elements in this list. */
+    /**
+     * @return The number of elements in this list.
+     * */
     int size();
+
 }

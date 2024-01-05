@@ -19,21 +19,34 @@
 package me.mikhan.algds.tree;
 
 /**
- * Created by malakhv on 16.05.17.
- */
+ * Basic interface for Tree.
+ *
+ * @author Mikhail.Malakhov
+ * */
 public interface Tree<E> {
 
-    /** Add specified element to this tree. */
+    /**
+     * Add specified element to this tree.
+     * */
     boolean add(E element);
 
+    /**
+     * @return The deep of this tree.
+     * */
     int getDeep();
 
-    /** @return True, if this list is empty. */
+    /**
+     * @return True, if this tree is empty.
+     * */
     boolean isEmpty();
 
-    /** Clear this tree. */
+    /**
+     * Clears this tree.
+     * */
     void clear();
 
-    /** @return The number of elements in this list. */
+    /**
+     * @return The number of elements in this tree.
+     * */
     int size();
 }

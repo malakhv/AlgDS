@@ -21,8 +21,10 @@ package me.mikhan.algds.tree;
 import me.mikhan.algds.data.Node;
 
 /**
- * Created by malakhv on 16.05.17.
- */
+ * Basic interface for Tree.
+ *
+ * @author Mikhail.Malakhov
+ * */
 public class BinaryTree<E> implements Tree<E> {
 
     private BNode<E> root = null;

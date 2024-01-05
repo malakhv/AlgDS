@@ -19,7 +19,9 @@
 package me.mikhan.algds.tree;
 
 /**
- * Basic interface of node for tree.
+ * Basic interface for tree node.
+ *
+ * @author Mikhail.Malakhov
  * */
 public interface TreeNode<N extends TreeNode<?>> {
     N getChild(int index);
