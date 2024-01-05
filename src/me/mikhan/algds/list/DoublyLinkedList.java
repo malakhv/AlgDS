@@ -23,7 +23,7 @@ import me.mikhan.algds.data.Node;
 /**
  * @author Mikhail.Malakhov
  * */
-public class DoublyLinkedList<E> implements LinkedList<E> {
+public class DoublyLinkedList<E> implements List<E> {
     @Override
     public boolean add(E element) {
         return false;

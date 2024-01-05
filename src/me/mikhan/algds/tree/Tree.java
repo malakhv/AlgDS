@@ -19,7 +19,7 @@
 package me.mikhan.algds.tree;
 
 /**
- * Basic interface for Tree.
+ * Basic interface for a Tree.
  *
  * @author Mikhail.Malakhov
  * */

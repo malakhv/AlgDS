@@ -19,11 +19,11 @@
 package me.mikhan.algds.list;
 
 /**
- * Basic interface for linked list (singly or doubly).
+ * Basic interface for a List (singly or doubly).
  *
  * @author Mikhail.Malakhov
  * */
-public interface LinkedList<E> {
+public interface List<E> {
 
     /**
      * Add an element to this list.

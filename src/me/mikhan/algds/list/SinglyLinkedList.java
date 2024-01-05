@@ -24,7 +24,7 @@ import me.mikhan.algds.data.Node;
  * The singly linked list.
  * @author Mikhail.Malakhov
  * */
-public class SinglyLinkedList<E> implements LinkedList<E> {
+public class SinglyLinkedList<E> implements List<E> {
 
     /** The first node. */
     private SNode<E> first = null;
