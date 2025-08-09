@@ -1,1 +1,4 @@
 /bin/
+
+// MacOS Finder files
+.DS_Store
